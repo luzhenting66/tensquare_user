@@ -1,0 +1,20 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: tensquare-user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.8.128:3306/tensquare_user?characterEncoding=utf-8
+    password: lzt4922
+    username: root
+  redis:
+    host: 192.168.8.128
+    port: 6379
+    password: lzt4922
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
