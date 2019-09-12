@@ -12,9 +12,39 @@ spring:
     host: 192.168.8.128
     port: 6379
     password: lzt4922
+  rabbitmq:
+    host: 192.168.8.128
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: tensquare_vhost
+    listener:
+      concurrency: 10 #并发消费者的初始化值
+      max-concurrency: 20 #并发消费者的最大值
+      prefetch: 5 #每个消费者每次监听时可拉取处理的消息数量
+    sms:
+      queue:
+        name: sms_queue
+      exchange:
+        name: sms_exchange
+      routing:
+        key:
+          name: sms_routing_key
+  jwt:
+    config:
+      key: lzt4922
+      ttl: 1800000
+
 
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6060/eureka/
+
 

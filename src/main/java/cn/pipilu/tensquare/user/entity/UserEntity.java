@@ -34,4 +34,5 @@ public class UserEntity extends BaseEntity {
     private Integer fansCount;// '粉丝数',
     @Column(name = "followcount")
     private Integer followCount;//'关注数',
+    private String state; //0-删除 、1-可用
 }

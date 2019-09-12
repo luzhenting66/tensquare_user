@@ -2,6 +2,7 @@ package cn.pipilu.tensquare.user.request;
 
 import cn.pipilu.plus.common.validate.Validate;
 import lombok.Data;
+import lombok.ToString;
 
 import java.io.Serializable;
 @Data

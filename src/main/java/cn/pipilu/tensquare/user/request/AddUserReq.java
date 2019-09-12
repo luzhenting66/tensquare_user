@@ -1,11 +1,12 @@
 package cn.pipilu.tensquare.user.request;
 
 import lombok.Data;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Date;
-
 @Data
+@ToString
 public class AddUserReq implements Serializable {
 
     private static final long serialVersionUID = -5020005158745140103L;
